@@ -1,0 +1,16 @@
+#!/bin/bash -e
+
+USER="redis"
+GROUP="$USER"
+RUNDIR=/var/run/redis
+PIDFILE=$RUNDIR/redis-server.pid
+
+mkdir -p $RUNDIR
+touch $PIDFILE
+chown $USER:$GROUP $RUNDIR $PIDFILE
+chmod 755 $RUNDIR
+
+chown $USER:$GROUP /var/lib/redis
+chown $USER:$GROUP /var/log/redis
+
+exec supervisord

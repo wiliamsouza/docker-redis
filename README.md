@@ -43,7 +43,7 @@ Shell access:
 $ docker.io run -p 6379:6379 -i \
 -v `pwd`/volumes/log:/var/log/redis \
 -v `pwd`/volumes/lib:/var/lib/redis \
--v `pwd`/volumes/etc:/etc/redis/conf.d \
+-v `pwd`/volumes/etc:/etc/redis \
 -t wiliamsouza/redis /bin/bash
 ```
 

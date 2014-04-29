@@ -34,6 +34,9 @@ CMD ["/usr/local/bin/startup"]
 
 # ppas
 
+# dependencies
+ADD sysctl.conf /etc/sysctl.conf
+
 # redis-server
 RUN apt-get install redis-server -y
 RUN update-rc.d -f redis-server disable

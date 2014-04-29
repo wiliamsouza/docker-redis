@@ -13,4 +13,6 @@ chmod 755 $RUNDIR
 chown $USER:$GROUP /var/lib/redis
 chown $USER:$GROUP /var/log/redis
 
+sysctl -p
+
 exec supervisord
